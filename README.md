@@ -1,9 +1,4 @@
-# aulasphp
- introducão a linguagem php com exercicios e exemplos
- 
- ## Exercicios feitos 
+# Atividades de programação PHP
 
- ### Exercicio 01
- Foi a apresentado a sintaxe do php e tambem algumas tags da linguagem como a saida de dados: `echo` 
-
+Repositorio utilizado durante as aulas de programação PHP na UC7 do curso técnico em informática para Internet.
 
