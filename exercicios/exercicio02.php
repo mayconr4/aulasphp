@@ -58,7 +58,8 @@
     //     "nome" => "james_01",
     //     "email" => "lebron@gmail.com",
     //     "senha" => "goat1234", 
-    //     "sexo" => "masculino",
+    //     "sexo" => "masculino", 
+    //      "idade" => "43",
     //     "cidade" => "Los angeles"
 
 
@@ -78,7 +79,7 @@
                 <ul class="lista1">
                     <li>nome: <?= $pessoaUm["nome"] ?></li>
                     <li>email: <?= $pessoaUm["email"] ?></li>
-                    <li>idade: <?= $pessoaUm[] ?></li>
+                    <li>idade: <?= $pessoaUm["idade"] ?></li>
                     <li>sexo: <?= $pessoaUm["sexo"] ?></li>
                 </ul>
             </section>
