@@ -92,10 +92,10 @@
             <section class="box2">
                 <h2>dados pessoa dois</h2>
                 <ul class="lista2">
-                    <li>nome: <?= $pessoaDois[0] ?></li>
-                    <li>email: <?= $pessoaDois[1] ?></li>
-                    <li>idade: <?= $pessoaDois[3] ?></li>
-                    <li>sexo: <?= $pessoaDois[4] ?></li>
+                    <li>nome: <?= $pessoaDois["nome"] ?></li>
+                    <li>email: <?= $pessoaDois["email"] ?></li>
+                    <li>idade: <?= $pessoaDois["idade"] ?></li>
+                    <li>sexo: <?= $pessoaDois["sexo"] ?></li>
                 </ul>
             </section>
         </div>
