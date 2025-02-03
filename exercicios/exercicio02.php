@@ -47,25 +47,30 @@
 <body>
 
 
-    <?php
-    //pessoa 1
-    $pessoaUm = ["lebron James", "lebron@gmail.com", "goat1234", 43, "masculino", "Los angeles"];
+    <?php 
 
-    //pessoa 2 
-    $pessoaDois = ["Rayssa leal", "leal@gmail.com", "skate1234", 16, "feminino", "Rio de Janeiro"]; 
+    $pessoaUm = [
+        "nome" => "james_01",
+        "email" => "lebron@gmail.com",
+        "senha" => "goat1234", 
+        "sexo" => "masculino", 
+        "idade" => 43,
+        "cidade" => "Los angeles"
 
-    // $pessoaUm = [
-    //     "nome" => "james_01",
-    //     "email" => "lebron@gmail.com",
-    //     "senha" => "goat1234", 
-    //     "sexo" => "masculino", 
-    //      "idade" => "43",
-    //     "cidade" => "Los angeles"
+    ];           
 
+    $pessoaDois =[
+        "nome"   => "Rayssa leal",
+        "email" => "leal@gmail.com",
+        "senha" => "skate1234",
+        "sexo" => "feminino",
+        "idade" =>  16,
+        "cidade" => "Rio de janeiro"
+    
 
-    // ]; 
-
-    // $pessoaDois
+    ]; 
+    
+    
     ?>
 
     <article >
