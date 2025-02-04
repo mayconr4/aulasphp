@@ -65,7 +65,7 @@
         "senha" => "skate1234",
         "sexo" => "feminino",
         "idade" =>  16,
-        "cidade" => "Rio de janeiro"
+        "cidade" => "Rio de janeiro" 
     
 
     ]; 
