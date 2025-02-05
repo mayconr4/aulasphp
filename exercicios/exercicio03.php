@@ -23,13 +23,23 @@ if ($valorDaCompra > 5000) {
 }
 
  $valorFinal = $valorDaCompra - $valorDaCompra * $desconto; 
- //$valorFinal = $valorDaCompra - $desconto; 
+ //$valorFinal = $valorDaCompra - $desconto;   
 
- $valorFinal_formatado = number_format($valorFinal, 2, ',','.');
+?>  
 
-?> 
+<p>Valor da compra (sem desconto): R$ 
+    <?= number_format($valorDaCompra, 2, ",", ".")?>
 
-<p>O valor final da compra é R$<?=$valorFinal_formatado?></p>
+</p>
+
+<p>O valor da compra (com desconto): R$
+    <?=number_format($valorFinal, 2, ",", ".")?>
+</p> 
+
+<p>Foi dado um desconto de :
+    <?=$desconto * 100?>% 
+    (<?=$valorDaCompra - $valorFinal?>)
+</p>
     
 </body>
 </html>
