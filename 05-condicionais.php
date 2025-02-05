@@ -27,14 +27,20 @@ if($numero > 1) echo "<p>$numero é maior que 1</p>";
     <hr>
 <?php
 $produto = "Ultrabook Asus";
-$qtdEmEstoque = 10; // o que temos
+$qtdEmEstoque = 1; // o que temos
 $qtdCritica = 5; // minimo necessário
 
 echo "<h3>$produto</h3>";
 echo "<h4>Quantidade em estoque: $qtdEmEstoque</h4>";
 
 if ($qtdEmEstoque < $qtdCritica) {
-    echo "<p>É necessario comprar!</p>";
+    echo "<p>É necessario comprar!</p>"; 
+
+    // Condicional ANINHADA
+    if($qtdEmEstoque === 0){
+        echo "<p><strong>👹URGENTE👹</strong></p>";
+    }
+
 } else {
     echo "<p>Estoque normal</p>";
 }
