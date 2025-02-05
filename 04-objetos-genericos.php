@@ -21,7 +21,7 @@ $usuario->telefones = ["11 97504-0149", "11 90000-9999"];
 
 echo $usuario->nome;
 
-// pode ser usadp {} ao redor do objeto/propriedade na interploração
+// pode ser usado {} ao redor do objeto/propriedade na interploração
 echo "<p><mark>$usuario->nome</mark></p>"; //interploração
 ?>
 
