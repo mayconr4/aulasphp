@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>php - condicionais</title>
+    <title>php - condicionais VERSÃO 2</title>
 
     <style>
         .comprar{color: red;}
@@ -13,30 +13,24 @@
             color: red;
         }
 
-        .normal{        
-            color: darkgreen;
-        }
+        .normal{  color: darkgreen; }                    
 
     </style>
 </head>
 <body>
-    <h1>Estruturas condicionais</h1>
+    <h1>VERSÃO 2 Estruturas condicionais</h1>
     <hr>
 
     <h2>Simples usando <code>if</code></h2>
    
 <?php
-$numero = 5;
-
-
+$numero = 5;  
 if($numero > 1){
-    echo "<p>$numero é maior que 1</p>";
-} 
-
-// sintaxe omitindo as chaves
-if($numero > 1) echo "<p>$numero é maior que 1</p>";
 ?>
-
+   <p><?=$numero?> é maior que 1</p>
+<?php
+}   
+?> 
     <h2>Composta usando <code>if/else</code></h2> 
     <hr>
 <?php
