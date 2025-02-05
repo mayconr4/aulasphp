@@ -68,17 +68,18 @@ if ($qtdEmEstoque < $qtdCritica) {
     <!-- Verificar a idade de uma pessoa e determinaar se ela é uma criança, adolescente, adulta ou idosa. -->
 
 <?php
-$idade = 48;
+$idade = 38;
 if ($idade <= 12) {
-    echo "<p>Criança 😈</p>";
+    $texto = "Criança 😈";
 } elseif($idade <= 17) {
-    echo "<p>Adolescente ☠️</p>";
+    $texto = "Adolescente ☠️";
 } elseif($idade <= 59) {
-    echo "<p>Adulto 💩</p>"; 
+    $texto = "Adulto 💩"; 
 } else {
-    echo "<p>Idoso 👨‍🦳</p>";
+    $texto = "Idoso 👨‍🦳";
 }
-?>
+?> 
+<p><?=$texto?></p>
 
 </body>
 </html>
