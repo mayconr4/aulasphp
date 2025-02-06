@@ -24,7 +24,20 @@ if ($media >= 7 && $faltas <= 10 ) {
 
 ?>
     <!-- O SIMBOLO É CHAMADO DE PIPE -->
-    <h2>|| (OU/OR)</h2> 
+    <h2>|| (OU/OR)</h2>
+    <p><i>Basta que apenas uma condição seja <b>VERDADEIRA/TRUE</b></i></p>  
+<?php
+// dar um desconto a um cliente que seja vip ou que tenha cupom
+$clienteVip = true; // valor/tipo lógico/boolean 
+$temCupom = false;
+
+if ($clienteVip || $temCupom) {
+     echo "<p>Desconto aplicado</p>";
+} else {
+    echo "<p>Sem desconto</p>";
+}
+
+?>
 
     <h2>! (NÃO/NOT)</h2> 
 
