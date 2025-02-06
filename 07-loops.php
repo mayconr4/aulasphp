@@ -74,14 +74,31 @@ $meses = array(
 
 <ol> 
 <?php 
-for($e = 0; $e <12 ; $e++){ //quando for exibir os dados do array em uma       estrtura de lopp lembrar de colocar o contador para exibir o array
-   
+for($e = 0; $e <12 ; $e++){ //quando for exibir os dados do array em uma       estrtura de lopp lembrar de colocar o contador para exibir o array    
 ?>
         <li><?=$meses[$e]?></li>       
 <?php
 }
 ?>
-</ol> 
+</ol>  
+
+<hr> 
+
+    <h2>FOREACH (PARA CADA)</h2>
+    <p>Versão simplificada do loop for bem mais facil de usar com arrays e objetos. </p>
+     
+    <h3>Acessandp array indexado/numérico</h3>
+<?php
+$alunos = ["Denis", "Paulo", "Heloisa"];
+
+// (nome do array as nome das variaveis)
+foreach( $alunos as $aluno ) {      
+?>
+    <p>Nome: <?=$aluno?> </p>
+<?php
+}
+?>
+
 
 </body>
 </html>
