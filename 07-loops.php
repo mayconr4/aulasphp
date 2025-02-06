@@ -23,7 +23,20 @@ while ($i <= 5){
 ?>
     <h2>DO/WHILE (parecido com Repita)</h2>
     <p>Rpete  <b>pelo menos uma vez</b> as ações e, caso a condição continue
-verdadeira, segue fazendo outros ciclos de repetição até a condição se tornae falsa.</p>
+verdadeira, segue fazendo outros ciclos de repetição até a condição se tornae falsa.</p> 
+
+<?php
+$j = 1;
+do {
+?> 
+    <div>
+        <h3 style="color: cornflowerblue;">Senac....</h3>
+        <p style="color: royalblue">maycon...</p>
+    </div>
+<?php 
+    $j++;
+} while($j <= 5);
+?>
 
     <h2>FOR (PARA)</h2>
     <p>Executa ações por uma <b>quantidade determinada</b> de vezes.</p>    
