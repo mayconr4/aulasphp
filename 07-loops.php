@@ -97,6 +97,24 @@ foreach( $alunos as $aluno ) {
     <p>Nome: <?=$aluno?> </p>
 <?php
 }
+?> 
+
+
+    <h3>Acesssando array asssociativo</h3>
+<?php
+$clubes = [
+    "Corinthas" => "galinhada",
+    "Palmeiras" => "Porco",
+    "São Paulo" => "Tricolor",
+    "Santos"   => "timão"
+];
+
+
+foreach($clubes as $clube => $apelido) {
+?>
+    <p> O clube <?=$clube?> é conhecido como <?=$apelido?></p>
+<?php
+} 
 ?>
 
 
