@@ -15,13 +15,15 @@
 $media = 9.5;
 $faltas = 10;
 
-if ($media >= 7 && $faltas <= 10 ) {
-    echo "<p>Aprovado!</p>";
+if ($media >= 7 && $faltas <= 10 ) { 
+?>
+    <p>Aprovado!</p>
+<?php
 } else {
-    echo "<p>reporvado!</p>";
-}
-
-
+?>
+    <p>reporvado!</p>
+<?php
+}  
 ?>
     <!-- O SIMBOLO É CHAMADO DE PIPE -->
     <h2>|| (OU/OR)</h2>
@@ -31,10 +33,14 @@ if ($media >= 7 && $faltas <= 10 ) {
 $clienteVip = true; // valor/tipo lógico/boolean 
 $temCupom = false;
 
-if ($clienteVip || $temCupom) {
-     echo "<p>Desconto aplicado</p>";
+if ($clienteVip || $temCupom) { 
+?>
+     <p>Desconto aplicado</p>
+<?php
 } else {
-    echo "<p>Sem desconto</p>";
+?>  
+    <p>Sem desconto</p>
+<?php
 }
 
 ?>
@@ -46,10 +52,14 @@ if ($clienteVip || $temCupom) {
 //caso contrário, exibir uma saudação.
 $usuarioLogado = false;
 
-if (!$usuarioLogado) {
-    echo "<a href=\"login.php\">Login</a>";
+if (!$usuarioLogado) { 
+?>
+    <a href="login.php">Login</a>
+<?php
 } else {
-    echo "<span>Bem-vindo ao sistema!</span>";
+?>  
+    <span>Bem-vindo ao sistema!</span>
+<?php
 }       
 ?> 
 
@@ -65,10 +75,14 @@ $idadeMinima = 20;
 $acompanhadoDosPais = true;
 $estaBebado = true;
 
-if (($idadeMinima >= 18 || $acompanhadoDosPais) && !$estaBebado) {
-    echo "<p>Entrada permitida</p>";
+if (($idadeMinima >= 18 || $acompanhadoDosPais) && !$estaBebado) { 
+?>
+    <p>Entrada permitida</p> 
+<?php
 } else {
-    echo "<p>Entrada negada</p>";
+?>     
+    <p>Entrada negada</p>
+<?php
 }
 
 ?>
