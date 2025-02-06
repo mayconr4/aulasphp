@@ -8,14 +8,56 @@
 <body>
     <h1>EXERCICIO - 04 </h1>
 <?php
-$linguagems = new stdClass();  
-$linguagems->$html = "Estruturação";
-$linguagems->$css = "Estilos";
-$linguagems->$js = "Comportamentos";
-$linguagems->$php = "Back-end";
-$linguagems->$sql = "Manipulação de dados";
-$linguagems->$java = "Softwares";
-?> 
+$linguagems = [
+    "HTML" => "Estruturação",
+    "CSS"  => "Estilos",
+    "JS"   => "Comportamentos",
+    "PHP"  => "Back-end",
+    "SQL"  => "Manipulação de dados",
+    "JAVA" => "Softwares"
+
+];
+
+?>  
+      <table>
+        <tr>
+            <th>ID</th>
+            <th>Linguagem</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>Exemplo</td>
+            <td>HTML</td>
+            <td><?=$linguagems["HTML"]?></td>
+        </tr>
+        <tr>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+        </tr>
+        <tr>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+        </tr> 
+        <tr>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+        </tr>
+        <tr>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+        </tr> 
+        <tr>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+            <td>Exemplo</td>
+        </tr>
+
+    </table>
+
 
 <thead></thead>
     
