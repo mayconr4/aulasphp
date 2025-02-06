@@ -69,14 +69,19 @@ $meses = array(
     "Outubro",
     "Novembro",
     "Dezembro"
-);
- 
+); 
+?>  
+
+<ol> 
+<?php 
 for($e = 0; $e <12 ; $e++){ //quando for exibir os dados do array em uma       estrtura de lopp lembrar de colocar o contador para exibir o array
-?> 
-  <?=$meses[$e]?> 
+   
+?>
+        <li><?=$meses[$e]?></li>       
 <?php
 }
 ?>
+</ol> 
 
 </body>
 </html>
