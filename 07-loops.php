@@ -48,6 +48,35 @@ for( $i = 1; $i <= 10; $i++ ){
     <p><code>i</code> vale: <b> <?=$i?> </b></p>
 <?php
 }
+?> 
+
+    <hr>
+    <h2>Mini-exrcicio</h2>
+    <p>Crie um array contendo os 12 meses do ano e usando dos loops que vimos , mostre os nomes dos meses em uma lista ordenada</p> 
+    <hr>
+
+<?php
+$meses = array(
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro"
+);
+ 
+for($e = 0; $e <12 ; $e++){ //quando for exibir os dados do array em uma       estrtura de lopp lembrar de colocar o contador para exibir o array
+?> 
+  <?=$meses[$e]?> 
+<?php
+}
 ?>
+
 </body>
 </html>
