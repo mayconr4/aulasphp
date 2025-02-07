@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exrcicio - 04</title>
+    <title>exrcicio - 04</title> 
+     
+    <style> 
+
+  table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table, td { border: 1px solid black;}
+           
+        
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }        
+
+    </style>
 </head>
 <body>
     <h1>EXERCICIO - 04 </h1>
@@ -16,50 +32,38 @@ $linguagems = [
     "SQL"  => "Manipulação de dados",
     "JAVA" => "Softwares"
 
-];
+]; 
 
-?>  
-      <table>
-        <tr>
-            <th>ID</th>
-            <th>Linguagem</th>
-            <th>Descrição</th>
-        </tr>
-        <tr>
-            <td>Exemplo</td>
-            <td>HTML</td>
-            <td><?=$linguagems["HTML"]?></td>
-        </tr>
-        <tr>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-        </tr>
-        <tr>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-        </tr> 
-        <tr>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-        </tr>
-        <tr>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-        </tr> 
-        <tr>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-            <td>Exemplo</td>
-        </tr>
+?> 
 
-    </table>
+<table> 
+<tbody> 
+<tr> 
+    <th>ID</th>
+    <th>linguagem</th>
+    <th>Descrição</th>        
+        
+<?php 
+$id = 1;
+foreach ($linguagems as $linguagem => $descricao) {
+?> 
 
+       
+        
+        <tr> 
+            <td><?=$id?></td>
+            <td><?=$linguagem?></td> 
+            <td><?=$descricao?></td>
+        </tr>
+    
 
-<thead></thead>
+<?php 
+$id++;
+}
+?> 
+</tr>
+</tbody>
+</table>    
     
 </body>
 </html>
