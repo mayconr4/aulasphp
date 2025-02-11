@@ -141,7 +141,9 @@ $formatarPreco = function (float $valor):string {
 
         <h2>Arrow Function (necessário usar fn)</h2>
 <?php
-$dobrarValor = fn($valor) => $valor *2; 
+// util para funções simples de uma unica linha e com return implicito
+//obs: esta sintaxe só permite uma unica operação (sem {}, sem return explicito)
+$dobrarValor = fn(int $valor):int => $valor *2; 
 ?> 
 
         <p><?=$dobrarValor(10)?></p>
