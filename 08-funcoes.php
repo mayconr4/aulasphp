@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -10,21 +10,34 @@
 </head>
 <body>  
     <div class="container">
-        <h1>Trabalhando com funções</h1>
+        <h1 class=" text-center">Trabalhando com funções</h1>
         <hr> 
 
 
         <h2>Função como procedimento (ou sub-rotina)</h2>
         <p><i>Procedimentos <b>não retornam</b> nada.</i></p>
 <?php
-function exibirDaddosDoAutor(){
-    echo "<h4>Fulano de tal</h4>";
+function exibirDadosDoAutor(){
+    echo "<h4>kyrie irving</h4>";
     echo "<p><time>".date("d/m/Y")."</time></p>";
 }        
 ?> 
 
-    <h3>Chamada de procedimento</h3>
-    <div> <?=exibirDaddosDoAutor();?> </div>
+    <h3>Chamada de procedimento</h3> 
+    <?php
+    $valor = 500;
+    if ($valor > 1000) {
+        exibirDadosDoAutor();
+    }
+    ?>
+    <div> <?=exibirDadosDoAutor();?> </div> 
+
+    <h3>Outras chamdas</h3>
+    <div><?=exibirDadosDoAutor()?></div>
+    <ul>
+        <li><?=exibirDadosDoAutor()?></li>
+        <li><b><?=exibirDadosDoAutor()?></b></li>
+    </ul>
 
     <hr>
     </div>
