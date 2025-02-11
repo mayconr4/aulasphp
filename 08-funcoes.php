@@ -99,31 +99,53 @@ function exibirSaudacao($mensagem, $pessoa = ""){
      <h2>Indução de tipos de dados</h2>
 <?php 
 /*Indicando que o parametro deve ser do tipo inteiro  e que o retorno da função deve ser doo tipo string.*/
-function verificarNegativo(int $valor):string {
-    if($valor < 0 ){
-        return "é nagetivo";
-    } else {
-        return "não é negativo";
-    }
-
-    return $valor < 0 ? "é negativo" : "não é negativo" //early 
-
-} 
-
-/*Tipos comuns para uso cpm indução 
+function verificarNegativo(int $valor):string {     
+    if($valor < 0 ) return "é nagetivo";               
+    
+    /* Early return (retorno antecipado)*/ 
+    return "não é negativo";     
+    /* ao usar early return , podemos em algumas situações evitar a necessidade do else (condicional composta). neste exemplo, se acondição for true o primeiro return é executado. Se não for , na sequencia será feito o segundo return.*/     
+};  
+?> 
+<!-- *Tipos comuns para uso cpm indução 
 string -> textos/carcteres em geral
 int -> nuneros inteiros 
 float -> números com casa decimais
 array -> vetor/matriz 
-object -> objeto*/
-?>
+object -> objeto*/ --> 
+
     <p>Número 10: <span class=" badge text-bg-success"><?=verificarNegativo(10)?></span></p> 
     <p>Número -10: <span class=" badge text-bg-danger "><?=verificarNegativo(-10)?></span></p> 
  
     <!-- o codigo abaixo ( tire os comentários  se quiser testar) gera um erro relacionado indução de  tipos (foi dado uma string e era esperado um numero inteiro) -->
 
-    <!-- <p>Teste de valor/parãmetro errado: não é negativo <?=verificarNegativo("paulo henrique")?></p> -->
-    </div>
+    <!-- <p>Teste de valor/parãmetro errado: não é negativo //=verificarNegativo("paulo henrique")</p> -->
+    </div> 
+
+    <hr>
+
+    <h2>Função anõnima (ou lampida)</h2>
+<?php
+$formatarPreco = function (float $valor):string {
+    $precoFormatado = "R$ ".number_format($valor, 2, ",", ".");
+    return $precoFormatado;
+};
+?>
+
+        <p><?=$formatarPreco(1000)?></p>
+        <p><?=$formatarPreco(1500.88)?></p>
+        <p><?=$formatarPreco(10500.2598)?></p>
+        <p><?=$formatarPreco(-1098)?></p> 
+
+        <hr> 
+
+        <h2>Arrow Function (necessário usar fn)</h2>
+<?php
+$dobrarValor = fn($valor) => $valor *2; 
+?> 
+
+        <p><?=$dobrarValor(10)?></p>
+        <p><?=$dobrarValor(100)?></p>
 
 
 
