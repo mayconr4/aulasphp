@@ -105,6 +105,9 @@ function verificarNegativo(int $valor):string {
     } else {
         return "não é negativo";
     }
+
+    return $valor < 0 ? "é negativo" : "não é negativo" //early 
+
 } 
 
 /*Tipos comuns para uso cpm indução 
