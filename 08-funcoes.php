@@ -39,7 +39,50 @@ function exibirDadosDoAutor(){
         <li><b><?=exibirDadosDoAutor()?></b></li>
     </ul>
 
-    <hr>
+    <hr> 
+
+    <h2>Função com parametros (ou argumentos)</h2> 
+<?php
+function somar($valorUm, $valorDois){ 
+    /*variavel de escopo local 
+    este tipo de variavel existe somente dentro da função em que foi declarada.*/
+  //$total =  $valorUm + $valorDois;
+
+  /*Retornamos o resultado ou seja , "mandamos para fora" da função o resultado do que ela fez. */ 
+  //return $total; 
+
+  // podemos também aplicar o return direto na expressão (sem uso de variavel local)
+  return $valorUm + $valorDois;
+}
+?>  
+
+    <h3>Chamadas / retornos da função somar</h3> 
+    <p>Resultado: 1 =<?=somar(10, 5)?> </p>
+    <p>Resultado: 2 = <?=somar(23, 107)?> </p>
+
+<?php
+// chamanado a função e guardando o resultado numa variavel global
+$resultadoTres = somar(1250, 788.85);    
+?>  
+    <p>Resultado: 3 = <?=$resultadoTres?></p> 
+
+<?php if($resultadoTres > 2000){ ?>
+    <p class=" alert alert-success">O resultado 3 é maior que 2000</p>
+
+<?php } else { ?>
+    <p class=" alert alert-danger">Resultado 3 não é maior que 2000</p>
+<?php } ?> 
+ 
+
+    <!-- usando uma funçao como parte de uma condição:
+     Primeiro, a fuunção é chamada (e aí ela calcula e retorna),
+     Depois o resultado que ela retornou é comparado com a condição --> 
+<?php if( somar(10, 50) < 500){ ?>
+    <p class=" alert alert-danger">João pedro reprovado.....</p> 
+<?php } ?>       
+    
+     
+
     </div>
 
 
