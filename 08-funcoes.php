@@ -91,8 +91,35 @@ function exibirSaudacao($mensagem, $pessoa = ""){
 }
 ?>
      <p>Mensagem 1: <?=exibirSaudacao("bom dia ", "João Pedro")?> </p> 
-     <p>Mensagem 1: <?=exibirSaudacao("boa tarde ")?> </p>
+     <p>Mensagem 1: <?=exibirSaudacao("boa tarde ")?> </p> 
 
+
+     <hr>
+
+     <h2>Indução de tipos de dados</h2>
+<?php 
+/*Indicando que o parametro deve ser do tipo inteiro  e que o retorno da função deve ser doo tipo string.*/
+function verificarNegativo(int $valor):string {
+    if($valor < 0 ){
+        return "é nagetivo";
+    } else {
+        return "não é negativo";
+    }
+} 
+
+/*Tipos comuns para uso cpm indução 
+string -> textos/carcteres em geral
+int -> nuneros inteiros 
+float -> números com casa decimais
+array -> vetor/matriz 
+object -> objeto*/
+?>
+    <p>Número 10: <span class=" badge text-bg-success"><?=verificarNegativo(10)?></span></p> 
+    <p>Número -10: <span class=" badge text-bg-danger "><?=verificarNegativo(-10)?></span></p> 
+ 
+    <!-- o codigo abaixo ( tire os comentários  se quiser testar) gera um erro relacionado indução de  tipos (foi dado uma string e era esperado um numero inteiro) -->
+
+    <!-- <p>Teste de valor/parãmetro errado: não é negativo <?=verificarNegativo("paulo henrique")?></p> -->
     </div>
 
 
