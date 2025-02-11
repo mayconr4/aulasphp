@@ -81,7 +81,17 @@ $resultadoTres = somar(1250, 788.85);
     <p class=" alert alert-danger">João pedro reprovado.....</p> 
 <?php } ?>       
     
-     
+    <h3>Função com parametros opcionais</h3> 
+<?php 
+/*Parametros opcionais possuem algum tipo de atribuição com um valor
+alterbativo para o caso de não serem passados na camada da função
+. obs.: sempre devem estar por ultimo na relação de prãmetros da função. */
+function exibirSaudacao($mensagem, $pessoa = ""){
+    return "Olá, $mensagem $pessoa";
+}
+?>
+     <p>Mensagem 1: <?=exibirSaudacao("bom dia ", "João Pedro")?> </p> 
+     <p>Mensagem 1: <?=exibirSaudacao("boa tarde ")?> </p>
 
     </div>
 
