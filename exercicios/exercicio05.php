@@ -27,23 +27,23 @@ if ($mediaAluno < 7) {
 ?>  
 
 <?php
-function calculoMedia($notaUm ,$notaDois,$notaTres){ 
+function calcularMedia(float $notaUm ,float $notaDois,float $notaTres){ 
 
     return ($notaUm + $notaDois + $notaTres) /3;
 
 }
 ?>  
  
- <P>media = <?=calculoMedia(4, 6, 3)?></P> 
+ <P>media = <?=calcularMedia(4, 6, 3)?></P> 
 
 <?php 
 
 //echo verificarSituacao($mediaAluno)
-function verificarSituacao(int $media ) {
+function verificarSituacao(float $media ):string {
    if ( $media <7 ) {
-        echo "<p class= 'badge text-bg-danger'>Reprovado</p>";
+        return "<p class= 'badge text-bg-danger'>Reprovado</p>";
    } else {
-        echo "<p class= 'badge text-bg-primary'>Aprovado</p>";
+        return "<p class= 'badge text-bg-primary'>Aprovado</p>";
    }
    
 };
@@ -52,7 +52,7 @@ function verificarSituacao(int $media ) {
     <hr>
 
 <?php
- $alunos = [   
+ $listaDealunos = [   
         [ 
             "nome" => "maycon",
             "nota1" => 5, 
@@ -87,31 +87,22 @@ function verificarSituacao(int $media ) {
     
         ];   
                   
-foreach ($alunos as $aluno ) {
-    
-    
-?>   
-    <div>   
-    <p><?=$media = calculoMedia($aluno["nota1"],$aluno["nota2"],$aluno["nota3"]);?></p>
-    <p><?=$situacao = verificarSituacao($media);?></p>         
-    <p >teste aluno <?=$aluno["nome"]?></p> 
+foreach ($listaDealunos as $aluno ) {    
+$media = calcularMedia($aluno["nota1"],$aluno["nota2"],$aluno["nota3"]);   
+$situacao = verificarSituacao($media);      
+?>            
+    <div>             
+    <p >aluno(a) <?=$aluno["nome"]?></p> 
     <p >nota <?=$aluno["nota1"]?></p> 
     <p >nota <?=$aluno["nota2"]?></p> 
     <p >nota <?=$aluno["nota3"]?></p> 
-    <p><?=$media?></p> 
-    <p><?=$situacao?></p> 
+    <p>Media: <b><?=number_format($media, 2, ",")?></b></p>
+    <p><?=$situacao?></p>  
+    
     </div>
 <?php
 }
-?>
-
-
-
-
-
-
-
-
+?>        
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
