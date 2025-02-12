@@ -33,17 +33,26 @@ function calculoMedia($notaUm ,$notaDois,$notaTres){
 
 }
 ?>  
- <?php  $mediaAluno = calculoMedia(4, 5, 6) ?>
+ 
+ <P>media = <?=calculoMedia(3, 6, 3)?></P> 
 
 <?php 
 
 //echo verificarSituacao($mediaAluno)
-function verificarSituacao($resposta, $aluno= "" ){
-
+function verificarSituacao(int $media ) {
+   if ( $media <7 ) {
+        echo "<p class= 'badge text-bg-danger'>Reprovado</p>";
+   } else {
+        echo "<p class= 'badge text-bg-primary'>Aprovado</p>";
+   }
+   
 };
-?>  
+?>   
+    <p>Voce foi <?=verificarSituacao(7)?></p> 
 
+    <p></p>
 
+    
 
 
 
