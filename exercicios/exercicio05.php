@@ -10,21 +10,21 @@
 </head>
 <body>  
         <h1>exercicio - 05</h1>
-//<?php
-//$noticeUm = 5 ;
-//$noticeDois = 4 ;
-//$noticeTres = 3;  
-//$mediaAluno = ($noticeUm + $noticeDois + $noticeTres) /3 ; 
-//if ($mediaAluno < 7) {
-//?>
+/<?php
+$noticeUm = 5 ;
+$noticeDois = 4 ;
+$noticeTres = 3;  
+$mediaAluno = ($noticeUm + $noticeDois + $noticeTres) /3 ; 
+if ($mediaAluno < 7) {
+?>
     <p>Reprovado</p>
-//<?php
-//} else { 
-//?> 
+<?php
+} else { 
+?> 
     <p>Aprovado</p> 
-//<?php    
-//}
-//?>  
+/<?php    
+}
+?>  
 
 <?php
 function calculoMedia($notaUm ,$notaDois,$notaTres){ 
@@ -34,7 +34,7 @@ function calculoMedia($notaUm ,$notaDois,$notaTres){
 }
 ?>  
  
- <P>media = <?=calculoMedia(3, 6, 3)?></P> 
+ <P>media = <?=calculoMedia(4, 6, 3)?></P> 
 
 <?php 
 
@@ -48,11 +48,64 @@ function verificarSituacao(int $media ) {
    
 };
 ?>   
-    <p>Voce foi <?=verificarSituacao(7)?></p> 
+    <p>Voce foi <?=verificarSituacao(7)?></p>  
+    <hr>
 
-    <p></p>
+<?php
+ $alunos = [   
+        [ 
+            "nome" => "maycon",
+            "nota1" => 5, 
+            "nota2" => 4,
+            "nota3" => 3
 
+        ], 
+        [
+            "nome" => "Henrique",
+            "nota1" => 3 , 
+            "nota2" => 6,
+            "nota3" => 2
+        ], 
+        [
+            "nome" => "Silva",
+            "nota1" => 7 , 
+            "nota2" => 8,
+            "nota3" => 9     
+        ], 
+        [
+            "nome" => "Santos",
+            "nota1" => 9 , 
+            "nota2" => 5,
+            "nota3" => 3    
+        ], 
+        [ 
+            "nome" => "Lebron",
+            "nota1" => 6 , 
+            "nota2" => 1,
+            "nota3" => 8   
+        ],                                            
     
+        ];   
+                  
+foreach ($alunos as $aluno ) {
+    
+    
+?>   
+    <div>   
+    <p><?=$media = calculoMedia($aluno["nota1"],$aluno["nota2"],$aluno["nota3"]);?></p>
+    <p><?=$situacao = verificarSituacao($media);?></p>         
+    <p >teste aluno <?=$aluno["nome"]?></p> 
+    <p >nota <?=$aluno["nota1"]?></p> 
+    <p >nota <?=$aluno["nota2"]?></p> 
+    <p >nota <?=$aluno["nota3"]?></p> 
+    <p><?=$media?></p> 
+    <p><?=$situacao?></p> 
+    </div>
+<?php
+}
+?>
+
+
 
 
 
