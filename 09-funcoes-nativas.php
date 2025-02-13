@@ -134,7 +134,19 @@ $emailCorreto = "tiago@provedor.com.br";
         <p><?=var_dump( filter_var($emailErrado, FILTER_VALIDATE_EMAIL) )?></p> 
         <p><?=var_dump( filter_var($emailCorreto, FILTER_VALIDATE_EMAIL) )?></p>
 
-        <h3>Sanitização</h3>
+        <h3>Sanitização</h3> 
+
+<?php
+$atatqueDeRaqui = "<script> 
+document.body.innerHTML = '<h1 style=background:yellow><marquee loop>Sou Raqui 🤬🤬🤬🤬!</marquee></h1>' 
+</script>"; 
+
+//echo $atatqueDeRaqui; 
+
+$ataqueSanitizado = filter_var($atatqueDeRaqui, FILTER_SANITIZE_SPECIAL_CHARS); 
+
+echo $ataqueSanitizado;
+?>
 
     </div>
 
