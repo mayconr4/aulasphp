@@ -36,9 +36,18 @@ $fraseBunitinha = str_replace(
 );
 ?> 
         <pre><?=var_dump($fraseFeia)?></pre>
-        <pre><?=var_dump($fraseBunitinha)?></pre>
+        <pre><?=var_dump($fraseBunitinha)?></pre> 
 
+        <hr>
 
+        <h3><code>explode()</code></h3>
+        <p>Tranformar uma string em um array</p>
+<?php
+$textosLinguagens = "HTML,CSS,JS,PHP,SQL";
+$arrayLinguagens = explode(",",$textosLinguagens);
+?>
+<pre><?=var_dump($textosLinguagens)?></pre>
+<pre><?=var_dump($arrayLinguagens)?></pre>
     </div>
 
 
