@@ -60,7 +60,56 @@ $arrayBandas= ["Rush", "Slayer", "Dio"];
 $textoBandas = implode(" - ",$arrayBandas);
 ?> 
 <pre><?=var_dump($arrayBandas)?></pre>
-<pre><?=var_dump($textoBandas)?></pre>
+<pre><?=var_dump($textoBandas)?></pre> 
+
+    <hr> 
+
+    <h3><code>extract()</code></h3>
+    <p>Extrai chaves do array associativo para variaveis</p>
+<?php
+$aluno = [
+    "id" => 1,
+    "nome" => "chapolin colarado",
+    "idade" => 25
+]; 
+
+extract($aluno);
+?> 
+
+    <ul>
+        <li>ID:    <?=$id?></li>
+        <li>NOME:  <?=$nome?></li>
+        <li>IDADE: <?=$idade?> anos.</li>
+    </ul> 
+
+    <hr> 
+
+    <h3><code>array_sum()</code></h3>
+    <p>somar valores de um array numérico</p>
+<?php
+$valores = [10, 20, 50, 520];
+$total = array_sum($valores);
+?>  
+    <p>Soma dos valores do aray: <b><?=$total?></b></p>  
+
+
+    <hr> 
+
+    <h3><code>array_unique()</code></h3>
+    <p>Retorna um novo array com dados <b>unicos</b></p>
+<?php
+$produtos = ["TV", "Notebook", "TV", "Geladeira", "Monitor", "Mouse", "Notebook", "Webcam"]; 
+
+
+$produtosUnicos = array_unique($produtos);
+?>
+        <pre><?=var_dump($produtos)?></pre>
+        <pre><?=var_dump($produtosUnicos)?></pre>
+
+
+
+
+
     </div>
 
 
