@@ -27,7 +27,16 @@
 
         <hr> 
 
-        <p> O fulano de tal tem 20 anos e é <?=verificarIdade(20)?>de idade</p>
+        <p> O fulano de tal tem 20 anos e é <?=verificarIdade(20)?>de idade</p> 
+
+        <hr> 
+
+        <article>
+            <h2>Titulo qualquer...</h2> 
+
+            <!-- Incluindo fragmento de HTML -->
+            <?php include "textos.html"; ?>
+        </article>
 
     </div>
 
