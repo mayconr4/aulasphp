@@ -73,13 +73,13 @@ $aluno = [
     "idade" => 25
 ]; 
 
-extract($aluno);
+extract($aluno, EXTR_PREFIX_SAME, "chave");
 ?> 
 
     <ul>
-        <li>ID:    <?=$id?></li>
-        <li>NOME:  <?=$nome?></li>
-        <li>IDADE: <?=$idade?> anos.</li>
+        <li>ID:    <?=$chave_id?></li>
+        <li>NOME:  <?=$chave_nome?></li>
+        <li>IDADE: <?=$chave_idade?> anos.</li>
     </ul> 
 
     <hr> 
@@ -143,11 +143,65 @@ document.body.innerHTML = '<h1 style=background:yellow><marquee loop>Sou Raqui �
 
 //echo $atatqueDeRaqui; 
 
-$ataqueSanitizado = filter_var($atatqueDeRaqui, FILTER_SANITIZE_SPECIAL_CHARS); 
-
+$ataqueSanitizado = filter_var($atatqueDeRaqui, FILTER_SANITIZE_SPECIAL_CHARS);  
 echo $ataqueSanitizado;
-?>
+?>  
 
+    <hr>
+    <h2> Segurança (Criptografia de dados) </h2>
+    <h3>Algoritimos e recursos</h3> 
+    <ul>
+        <li>MD5</li>
+        <li>SHA-1</li>
+        <li>SHA-256</li>
+        <li><b>paasword_hash() e password_verify()</b></li>
+    </ul>
+<?php
+// plain text
+$senhaTextoPuro = "123senac";
+
+// MD5
+$senhaCodificadaComMd5 = md5($senhaTextoPuro);// MD5
+$senhaCodificadaComSha1 = sha1($senhaTextoPuro); // SHA-1 
+$senhaCodificadaComSha256 = hash('sha256',$senhaTextoPuro); // SHA-256
+?> 
+
+    <hr> 
+    <p class=" alert alert-warning"><i>Métodos/Algoritimos antigos (evite usar)</i></p>
+    <p>Senha (texto puro): <?=$senhaTextoPuro?></p>
+
+    <p>Senha (MD5): 
+         <?=$senhaCodificadaComMd5?> - (<?=strlen($senhaCodificadaComMd5)?>)</p>  
+
+         <p>Senha (SHA-1):                     
+         <?=$senhaCodificadaComSha1?> - (<?=strlen($senhaCodificadaComSha1)?>)</p>   
+
+         <p>Senha (SHA-256): 
+            <?=$senhaCodificadaComSha256?> (<?=strlen($senhaCodificadaComSha256)?>)
+         </p>
+        <hr>
+        <p class=" alert alert-success"><i>Métodos/Algoritimos  ideal atualmente </i></p> 
+<?php
+$senhaCodificada = password_hash($senhaTextoPuro, PASSWORD_DEFAULT);
+?> 
+
+        <p>Senha codificada com <code>password_hash()</code>: <?=$senhaCodificada?> (<?=strlen($senhaCodificada)?>)
+        </p> 
+
+        <h4>Comparando a senha informada com a senha modificada</h4> 
+<?php
+// simulando a digitaçãp de senaha de um formulário
+$senhaDigitada = "123senac";
+if ( password_verify($senhaDigitada, $senhaCodificada) ) { 
+?> 
+    <p class="alert alert-success">Senha correta, pode entrar...</p>
+<?php    
+} else { 
+?>
+    <p class="alert alert-danger">Senha errada! some daqui noia...</p> 
+<?php
+} 
+?>
     </div>
 
 
