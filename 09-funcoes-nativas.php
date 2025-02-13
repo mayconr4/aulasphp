@@ -14,7 +14,8 @@
         <hr>
 
     <h2>Strings</h2>
-    <h3><code>trim()</code></h3>
+    <h3><code>trim()</code></h3> 
+    <p>Remove espaços antes e depois de strings</p>
 <?php
 $texto = "  Paulo Henrique está me devendo paçocas    ";
 $textoSemEspaco = trim($texto);
@@ -24,7 +25,20 @@ $textoSemEspaco = trim($texto);
 
     <hr>
 
-    <h3></h3>
+    <h3><code>str_replace()</code></h3>
+    <p>Permite subistituir partes de uma string.</p> 
+<?php
+$fraseFeia = "Esse Paulo é um bobão e xarope";
+$fraseBunitinha = str_replace( 
+    ["bobão", "xarope"],
+    ["🤬💩", "🫷🫸"], 
+    $fraseFeia
+);
+?> 
+        <pre><?=var_dump($fraseFeia)?></pre>
+        <pre><?=var_dump($fraseBunitinha)?></pre>
+
+
     </div>
 
 
