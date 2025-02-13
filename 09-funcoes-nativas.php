@@ -117,7 +117,24 @@ $valorQualquer = 1259.75;
 
         <p>Menor Valor: <?=min($valores)?></p> 
         <p>Maior Valor: <?=max($valores)?></p> 
-        <p>Arrendondamento: <?=round($valorQualquer)?></p>
+        <p>Arrendondamento: <?=round($valorQualquer)?></p> 
+
+
+        <h2>Filtros</h2>
+        <p>Recursoso/funções/ constante sde analise de dados aplicados através das funções <code>filter_var()</code> e <code>filter_input()</code></p> 
+
+        <h3>Validação</h3>
+<?php 
+//exemplo de email estruturado incorretamente
+$emailErrado = "tiago.com.br";
+$emailCorreto = "tiago@provedor.com.br";
+
+
+?> 
+        <p><?=var_dump( filter_var($emailErrado, FILTER_VALIDATE_EMAIL) )?></p> 
+        <p><?=var_dump( filter_var($emailCorreto, FILTER_VALIDATE_EMAIL) )?></p>
+
+        <h3>Sanitização</h3>
 
     </div>
 
