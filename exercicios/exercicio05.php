@@ -9,7 +9,7 @@
     
 </head>
 <body>  
-        <h1>exercicio - 05</h1>
+        <h1 class=" text-center bg-info">exercicio - 05</h1>
 /<?php
 $noticeUm = 5 ;
 $noticeDois = 4 ;
@@ -17,11 +17,11 @@ $noticeTres = 3;
 $mediaAluno = ($noticeUm + $noticeDois + $noticeTres) /3 ; 
 if ($mediaAluno < 7) {
 ?>
-    <p>Reprovado</p>
+    <!-- <p>Reprovado</p> -->
 <?php
 } else { 
 ?> 
-    <p>Aprovado</p> 
+    <!-- <p>Aprovado</p>  -->
 /<?php    
 }
 ?>  
@@ -34,7 +34,7 @@ function calcularMedia(float $notaUm ,float $notaDois,float $notaTres){
 }
 ?>  
  
- <P>media = <?=calcularMedia(4, 6, 3)?></P> 
+ <!-- <P>media = <//?=//calcularMedia(4, 6, 3)?></P>  -->
 
 <?php 
 
@@ -48,7 +48,7 @@ function verificarSituacao(float $media ):string {
    
 };
 ?>   
-    <p>Voce foi <?=verificarSituacao(7)?></p>  
+    <!-- <p>Voce foi <//?=//verificarSituacao(7)?></p>   -->
     <hr>
 
 <?php
@@ -91,15 +91,15 @@ foreach ($listaDealunos as $aluno ) {
 $media = calcularMedia($aluno["nota1"],$aluno["nota2"],$aluno["nota3"]);   
 $situacao = verificarSituacao($media);      
 ?>            
-    <div>             
-    <p >aluno(a) <?=$aluno["nome"]?></p> 
-    <p >nota <?=$aluno["nota1"]?></p> 
-    <p >nota <?=$aluno["nota2"]?></p> 
-    <p >nota <?=$aluno["nota3"]?></p> 
-    <p>Media: <b><?=number_format($media, 2, ",")?></b></p>
-    <p><?=$situacao?></p>  
+    <ul class=" list-group container">             
+    <li  class=" list-group-item list-group-item-primary">aluno(a) <?=$aluno["nome"]?></li> 
+    <li  class=" list-group-item">nota <?=$aluno["nota1"]?></li> 
+    <li  class=" list-group-item">nota <?=$aluno["nota2"]?></li> 
+    <li  class=" list-group-item">nota <?=$aluno["nota3"]?></li> 
+    <li class=" list-group-item">Media: <b><?=number_format($media, 2, ",")?></b></li>
+    <li class="list-group-item"><?=$situacao?></li>  
     
-    </div>
+    </ul>
 <?php
 }
 ?>        
