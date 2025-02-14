@@ -8,7 +8,8 @@
 
     
 </head>
-<body>  
+<body>   
+    <div class=" container">
         <h1 class=" text-center bg-info">exercicio - 05</h1>
 /<?php
 $noticeUm = 5 ;
@@ -91,7 +92,7 @@ foreach ($listaDealunos as $aluno ) {
 $media = calcularMedia($aluno["nota1"],$aluno["nota2"],$aluno["nota3"]);   
 $situacao = verificarSituacao($media);      
 ?>            
-    <ul class=" list-group container">             
+    <ul class=" list-group  container">             
     <li  class=" list-group-item list-group-item-primary">aluno(a) <?=$aluno["nome"]?></li> 
     <li  class=" list-group-item">nota <?=$aluno["nota1"]?></li> 
     <li  class=" list-group-item">nota <?=$aluno["nota2"]?></li> 
@@ -99,7 +100,9 @@ $situacao = verificarSituacao($media);
     <li class=" list-group-item">Media: <b><?=number_format($media, 2, ",")?></b></li>
     <li class="list-group-item"><?=$situacao?></li>  
     
-    </ul>
+    </ul> 
+
+    </div>
 <?php
 }
 ?>        
