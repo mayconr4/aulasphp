@@ -35,10 +35,12 @@
     /* Se houver interesses, os armezene. Caso contrário, guarde um array vazio.*/  
    ?>
     <?php
-    $interesses = $_POST["interesses"] ??  []; 
+    $interesses = filter_var_array( $_POST["interesses"] ??  [], FILTER_SANITIZE_FULL_SPECIAL_CHARS 
+); 
 
     // capturando o radio
-    $informativos = $_POST["informativo"] ?? []; 
+    $informativos = filter_var_array( $_POST["informativos"] ??  [], FILTER_SANITIZE_FULL_SPECIAL_CHARS 
+); 
     ?>
     <!-- Exibindo: -->
     <h2>Dados:</h2>
