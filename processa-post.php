@@ -13,21 +13,18 @@
 <body>
     <div class="container">
         <h1>Processamento usando POST</h1>
-        <hr>
-
-    
-     
+        <hr>             
 
   <?php if ( empty($_POST["nome"]) || empty($_POST["email"]) ) { ?> 
     <p class=" alert alert-danger">por favor prencha os campos de <b>NOME</b> e <b>EMAIL</b></p> 
 
     <?php     
    }else {   
-   // Capturando os dados transmistidos
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $idade = $_POST["idade"];
-    $mensagem = $_POST["mensagem"];
+   // Capturando os dados transmistidose sanitizá-los
+    $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    $idade = filter_input(INPUT_POST, "idade", FILTER_SANITIZE_NUMBER_INT);
+    $mensagem = filter_input(INPUT_POST, "mensagem", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     
     // capturando os options 
 
