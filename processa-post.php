@@ -30,8 +30,10 @@
 
     // Solução 2 : usando operador de coalesc~encia nula ?? 
     /* Se houver interesses, os armezene. Caso contrário, guarde um array vazio.*/ 
-    $interesses = $_POST["interesses"] ??  [];
+    $interesses = $_POST["interesses"] ??  []; 
 
+    // capturando o radio
+    $informativos = $_POST["informativo"] ; 
     ?>
     <!-- Exibindo: -->
     <h2>Dados:</h2>
@@ -39,7 +41,8 @@
     <ul>
         <li>Nome: <?= $nome ?></li>
         <li>E-mail <?= $email ?></li>
-        <li>Idade: <?= $idade ?> anos</li> 
+        <li>Idade: <?= $idade ?> anos</li>  
+        <li>Receber informativos <?=$informativos?></li>
 
         <!-- Usamos o empty com inversão de lógica (operador ! de navegação). 
          Portanto, se NÃO ESTÁ vazio, mostre os interesses. -->
@@ -57,7 +60,15 @@
 
             </ul>
         </li> 
-<?php }?>
+<?php }?> 
+
+<?php 
+    if ($informativos = "sim") {
+        $_POST;
+    } else {
+        
+    }
+?>
 
         <li>Mensagem: <?= $mensagem ?></li>
     </ul>
