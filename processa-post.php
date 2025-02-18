@@ -15,25 +15,33 @@
         <h1>Processamento usando POST</h1>
         <hr>
 
-    </div>
-    <?php
-    // Capturando os dados transmistidos
+    
+     
+
+  <?php if ( empty($_POST["nome"]) || empty($_POST["email"]) ) { ?> 
+    <p class=" alert alert-danger">por favor prencha os campos de <b>NOME</b> e <b>EMAIL</b></p> 
+
+    <?php     
+   }else {   
+   // Capturando os dados transmistidos
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $idade = $_POST["idade"];
     $mensagem = $_POST["mensagem"];
-
+    
     // capturando os options 
 
     //solução 1: aplicar um ternario checando se existe algum interesse
     //$interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : []; 
 
-    // Solução 2 : usando operador de coalesc~encia nula ?? 
-    /* Se houver interesses, os armezene. Caso contrário, guarde um array vazio.*/ 
+    // Solução 2 : usando operador de coalescência nula ?? 
+    /* Se houver interesses, os armezene. Caso contrário, guarde um array vazio.*/  
+   ?>
+    <?php
     $interesses = $_POST["interesses"] ??  []; 
 
     // capturando o radio
-    $informativos = $_POST["informativo"] ; 
+    $informativos = $_POST["informativo"] ?? []; 
     ?>
     <!-- Exibindo: -->
     <h2>Dados:</h2>
@@ -42,8 +50,11 @@
         <li>Nome: <?= $nome ?></li>
         <li>E-mail <?= $email ?></li>
         <li>Idade: <?= $idade ?> anos</li>  
-        <li>Receber informativos <?=$informativos?></li>
-
+        <?php if(  !empty($interesses) ) {?>
+        
+        <li>Receber informativos: <?=$informativos?></li>
+        <?php } ?>
+    
         <!-- Usamos o empty com inversão de lógica (operador ! de navegação). 
          Portanto, se NÃO ESTÁ vazio, mostre os interesses. -->
 <?php if(  !empty($interesses) ) {?>
@@ -59,19 +70,19 @@
                 <?php  } ?>
 
             </ul>
-        </li> 
-<?php }?> 
-
-<?php 
-    if ($informativos = "sim") {
-        $_POST;
-    } else {
+        </li>  
         
-    }
+        <?php } ?>  
+
+   <li>Mensagem: <?= $mensagem ?></li>  
+        
+   </ul>
+<?php 
+ }  
 ?>
 
-        <li>Mensagem: <?= $mensagem ?></li>
-    </ul>
+</div>
+       
 
 
 
